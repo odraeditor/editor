@@ -1,0 +1,34 @@
+#+title: Planning and Agenda Closure
+#+property: COLUMNS %25ITEM %TODO %PRIORITY %TAGS %EFFORT
+
+* TODO [#A] Deliver planning closure :work:jan:
+SCHEDULED: <2026-09-16 Wed 09:00 +1w>
+DEADLINE: <2026-09-18 Fri -1d>
+:PROPERTIES:
+:OWNER: Ada
+:EFFORT: 2:00
+:ATTACH_DIR: assets/planning
+:END:
+:LOGBOOK:
+CLOCK: [2026-09-16 Wed 09:00]--[2026-09-16 Wed 09:30] =>  0:30
+:END:
+- [ ] Verify direct task edit
+- [X] Verify agenda projection
+[[file:assets/planning/checklist.txt][Checklist]]
+
+** NEXT Review remote agenda edit :review:
+:PROPERTIES:
+:REMOTE_EDIT_OUTCOME: committed
+:END:
+
+* Archived source evidence :archive:
+:PROPERTIES:
+:JAN_ARCHIVE_SOURCE: notes/projects.org
+:JAN_ARCHIVE_NODE: 42
+:END:
+
+* Feed intake
+:PROPERTIES:
+:JAN_FEED_URL: https://example.invalid/feed.xml
+:JAN_FEED_FORMAT: atom
+:END:

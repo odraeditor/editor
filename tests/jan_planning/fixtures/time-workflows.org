@@ -1,0 +1,17 @@
+#+title: Time workflow parity
+#+timezone: Europe/Warsaw
+
+* TODO Prepare recurring review
+SCHEDULED: <2026-09-16 Wed 10:30 ++1w -2d>
+DEADLINE: <2026-09-18 Fri 16:00>
+:PROPERTIES:
+:EFFORT: 1:30
+:END:
+:LOGBOOK:
+CLOCK: [2026-09-16 Wed 10:00]--[2026-09-16 Wed 11:15] =>  1:15
+:END:
+
+* DONE Closed occurrence
+CLOSED: [2026-09-16 Wed 11:15]
+* Timer notes
+Elapsed: 01:01:01

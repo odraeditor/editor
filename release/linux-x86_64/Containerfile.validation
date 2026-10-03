@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2026 Adrian PK
+# SPDX-License-Identifier: GPL-3.0-only
+#
+# This file is part of Odra. See COPYING for license terms.
+
+ARG ODRA_BUILD_IMAGE
+FROM ${ODRA_BUILD_IMAGE}
+
+ARG LIBSODIUM_PACKAGE_URL=https://archive.archlinux.org/packages/l/libsodium/libsodium-1.0.22-1-x86_64.pkg.tar.zst
+ARG LIBSODIUM_PACKAGE_SHA256=fc0440c108fff0341f3cb7b4ee38f5a9406b45d9315205ce999e1b147b52f972
+
+RUN set -eux; \
+    pacman -Rdd --noconfirm odin racket; \
+    if command -v odin; then echo 'Odin remained in the validation image' >&2; exit 1; fi; \
+    if command -v racket; then echo 'Racket remained in the validation image' >&2; exit 1; fi; \
+    curl --fail --location --output /tmp/libsodium.pkg.tar.zst "$LIBSODIUM_PACKAGE_URL"; \
+    printf '%s  %s\n' "$LIBSODIUM_PACKAGE_SHA256" /tmp/libsodium.pkg.tar.zst \
+      | sha256sum --check --strict; \
+    pacman -U --needed --noconfirm /tmp/libsodium.pkg.tar.zst; \
+    rm -f /tmp/libsodium.pkg.tar.zst; \
+    ldconfig -p | grep -F libsodium.so; \
+    rmdir /workspace; \
+    pacman -Scc --noconfirm
+
+WORKDIR /

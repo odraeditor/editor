@@ -1,0 +1,26 @@
+{
+  "schema": "odra-evidence/subject-registry/v1",
+  "subjects": [
+    {
+      "subject_id": "odra",
+      "kind": "product",
+      "source_repository": "odra/odra",
+      "default_branch": "dev",
+      "evidence_policy": "odra-evidence/retention/initial-v1"
+    },
+    {
+      "subject_id": "packages/roman",
+      "kind": "package",
+      "source_repository": "odra/packages",
+      "default_branch": "dev",
+      "evidence_policy": "odra-evidence/retention/initial-v1"
+    },
+    {
+      "subject_id": "packages/rot13",
+      "kind": "package",
+      "source_repository": "odra/packages",
+      "default_branch": "dev",
+      "evidence_policy": "odra-evidence/retention/initial-v1"
+    }
+  ]
+}

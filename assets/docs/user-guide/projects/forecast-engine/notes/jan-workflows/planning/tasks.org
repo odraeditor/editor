@@ -1,0 +1,34 @@
+# SPDX-FileCopyrightText: 2026 Adrian PK
+# SPDX-License-Identifier: GPL-3.0-only
+#
+# This file is part of Odra. See COPYING for license terms.
+
+#+TITLE: Forecast Planning
+#+TODO: TODO NEXT WAIT | DONE CANCELLED
+#+PROPERTY: Effort_ALL 0:15 0:30 1:00 2:00
+
+* TODO Review observation model :forecast:model:
+  :PROPERTIES:
+  :OWNER:    analyst
+  :EFFORT:   0:30
+  :END:
+  SCHEDULED: <2026-09-17 Thu>
+  DEADLINE: <2026-09-18 Fri>
+
+  - [ ] Compare the three observations [0/2]
+    - [ ] Check temperature values
+    - [ ] Check confidence values
+
+* WAIT Publish local summary :forecast:publish:
+  :PROPERTIES:
+  :OWNER:    reviewer
+  :EFFORT:   1:00
+  :END:
+
+* Inbox
+  Capture new work here. Capture preview and abort must leave this file
+  unchanged; finalize inserts one checked item.
+
+* Expected outcome
+  Semantic edits are one-unit undoable. Agenda rows reveal their exact source.
+  A stale agenda edit is rejected and preserves this document.

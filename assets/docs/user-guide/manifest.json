@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "exerciseSetVersion": "0.2.0",
+  "compatibleOdraVersion": "0.2.0",
+  "setupFormatVersion": 1,
+  "files": [
+    {
+      "path": "bin/odra-guide",
+      "sha256": "9a4ae5b8ed4ecf7ab809576d694e78c68d35a39805f999d1a76b199ff7c1d055"
+    },
+    {
+      "path": "dirs/notes/editing-practice.txt",
+      "sha256": "0937914c4744aaf37e3a5ac3217a454f977c9d14bdc05612e6452ad406b67b4f"
+    },
+    {
+      "path": "dirs/notes/review.md",
+      "sha256": "6b272924d7bff96cc6ee4d91b4158fa8db4bf020cad147eadf0bf164fb2caae8"
+    },
+    {
+      "path": "projects/forecast-engine/README.md",
+      "sha256": "488cacdd8e457b9b958da061abbcd0e80f50fbc11465d868717367cba2f7b8d0"
+    },
+    {
+      "path": "projects/forecast-engine/data/observations.tsv",
+      "sha256": "43b5f1b33e4509e47bf2854dcd01f09f8ff4478d419aa15b569a4b03ca588cc2"
+    },
+    {
+      "path": "projects/forecast-engine/main.odin",
+      "sha256": "2ed3981ba3b7daef3ed296c8612e60995a89b566bfdeaead644d2d50a60c3aa1"
+    },
+    {
+      "path": "projects/forecast-engine/notes/jan-workflows/00-start-here.jan",
+      "sha256": "87b5e0fc484b26fb3f7348f5233e02295096ce3f2610d1a582cb7048cf38986e"
+    },
+    {
+      "path": "projects/forecast-engine/notes/jan-workflows/00-start-here.org",
+      "sha256": "87b5e0fc484b26fb3f7348f5233e02295096ce3f2610d1a582cb7048cf38986e"
+    },
+    {
+      "path": "projects/forecast-engine/notes/jan-workflows/README.md",
+      "sha256": "c5f54d4321494af96920b8a4506ce015acd49c00183f1738596debb3ee8414df"
+    },
+    {
+      "path": "projects/forecast-engine/notes/jan-workflows/computation/report.jan",
+      "sha256": "ee2b9c3ffb13aca8e177d4ca50c2491efe11ebe3358a47d8d75d7bf2f3051714"
+    },
+    {
+      "path": "projects/forecast-engine/notes/jan-workflows/planning/tasks.org",
+      "sha256": "aef964e85fa0b9eb74dd553990e92e07ab65e0447ec1e26ced90034e0ffa58b7"
+    },
+    {
+      "path": "projects/forecast-engine/notes/jan-workflows/publishing/site.org",
+      "sha256": "86244b0ed6a232c535f8332d33cd52b63905e3976cb6e1f2535f4770818f23af"
+    },
+    {
+      "path": "projects/forecast-engine/notes/jan-workflows/references/library.json",
+      "sha256": "8c850d98a638a2161e50bd31187ba8d93788e12f7c238e51028706f1b1147fc0"
+    },
+    {
+      "path": "projects/forecast-engine/notes/structured-editing.jan",
+      "sha256": "02df58de05e9302ffbe59395eed75c2c5179a03627c327c659416e66182ae785"
+    },
+    {
+      "path": "projects/forecast-engine/notes/structured-editing.org",
+      "sha256": "02df58de05e9302ffbe59395eed75c2c5179a03627c327c659416e66182ae785"
+    },
+    {
+      "path": "projects/forecast-engine/src/forecast/model.odin",
+      "sha256": "8808e1bd738174a9a7490e60ecdb18dd2b4d8766e13966df2b2c81616142b530"
+    },
+    {
+      "path": "projects/forecast-engine/src/forecast/summary.odin",
+      "sha256": "c2eabea216bb6ab7eed3b0f4d1315195463d07156b71fb1b34f89dbe0ca4d7b5"
+    },
+    {
+      "path": "projects/report-console/README.md",
+      "sha256": "8aef5a391944861c3c602fbbe56f46c5790d89fa30c8348f15cd11a2408fce40"
+    },
+    {
+      "path": "projects/report-console/main.rkt",
+      "sha256": "af9fa96e84c199e1e403a27f57778e995b6f1d8c0383798d44d2c23ff6b99854"
+    },
+    {
+      "path": "projects/report-console/src/report.rkt",
+      "sha256": "8c3f5889b765579bc45bcec2c5740bff3e76c9ceb525c9134b4ed981bd71d024"
+    },
+    {
+      "path": "projects/report-console/templates/daily.txt",
+      "sha256": "fe9ebd1ddada330bb37a5552130a76f5d7730860995e64b4cccccce6b97f8513"
+    },
+    {
+      "path": "projects/report-console/tests/report-test.rkt",
+      "sha256": "8693a7b327eff89d9a54b7d26eb5235dab65e4d12917fa3a9d288b27c4954358"
+    },
+    {
+      "path": "workspaces/user-guide.json",
+      "sha256": "b23b185e38b26f41d8b56f4d32402c868b14020fab0916432b79c325bd379ec1"
+    }
+  ],
+  "dirs": [
+    {
+      "id": "notes",
+      "name": "Notes",
+      "root": "dirs/notes"
+    }
+  ],
+  "projects": [
+    {
+      "id": "forecast-engine",
+      "name": "Forecast Engine",
+      "root": "projects/forecast-engine",
+      "trust": "untrusted"
+    },
+    {
+      "id": "report-console",
+      "name": "Report Console",
+      "root": "projects/report-console",
+      "trust": "untrusted"
+    }
+  ],
+  "workspaces": [
+    {
+      "id": "user-guide",
+      "name": "User Guide",
+      "definition": "workspaces/user-guide.json",
+      "projects": [
+        "forecast-engine",
+        "report-console"
+      ]
+    }
+  ],
+  "resetGroups": [
+    {
+      "id": "notes",
+      "workPaths": [
+        "dirs/notes"
+      ]
+    },
+    {
+      "id": "forecast-engine",
+      "workPaths": [
+        "projects/forecast-engine"
+      ]
+    },
+    {
+      "id": "report-console",
+      "workPaths": [
+        "projects/report-console"
+      ]
+    },
+    {
+      "id": "working-context-demos",
+      "workPaths": [
+        "dirs/project-removal-demo",
+        "dirs/workspace-notes"
+      ]
+    },
+    {
+      "id": "configuration-examples",
+      "configurationPaths": [
+        "odra/init.rkt",
+        "odra/modules/ksawery-tools.rkt",
+        "odra/modules/text-commands.rkt",
+        "odra/settings/interface.rkt",
+        "odra/settings/keys.rkt"
+      ]
+    },
+    {
+      "id": "report-console-promotion",
+      "workPaths": [
+        "projects/report-console/.odra/project.rkt"
+      ],
+      "configurationPaths": [
+        "odra/projects/report-console.rkt",
+        "odra/workspaces/user-guide.rkt"
+      ],
+      "stateProfile": "ordinary-dir"
+    },
+    {
+      "id": "workspace-state",
+      "workPaths": [
+        "projects/forecast-engine/.odra/project.rkt",
+        "projects/report-console/.odra/project.rkt"
+      ],
+      "configurationPaths": [
+        "odra/projects/forecast-engine.rkt",
+        "odra/projects/report-console.rkt",
+        "odra/workspaces/user-guide.rkt"
+      ],
+      "stateProfile": "two-project-workspace"
+    },
+    {
+      "id": "all",
+      "includes": [
+        "notes",
+        "forecast-engine",
+        "report-console",
+        "working-context-demos",
+        "configuration-examples",
+        "workspace-state"
+      ]
+    }
+  ],
+  "expectedChanges": [
+    {
+      "scope": "work",
+      "path": "dirs/notes/editing-practice.txt",
+      "kind": "mutated",
+      "resetGroup": "notes"
+    },
+    {
+      "scope": "work",
+      "path": "dirs/notes/review.md",
+      "kind": "mutated",
+      "resetGroup": "notes"
+    },
+    {
+      "scope": "work",
+      "path": "dirs/notes/session-notes.txt",
+      "kind": "created",
+      "resetGroup": "notes"
+    },
+    {
+      "scope": "work",
+      "path": "projects/forecast-engine/darek-practice",
+      "kind": "created",
+      "resetGroup": "forecast-engine"
+    },
+    {
+      "scope": "work",
+      "path": "projects/forecast-engine/maksym-practice",
+      "kind": "created",
+      "resetGroup": "forecast-engine"
+    },
+    {
+      "scope": "work",
+      "path": "dirs/project-removal-demo",
+      "kind": "created",
+      "resetGroup": "working-context-demos"
+    },
+    {
+      "scope": "work",
+      "path": "dirs/workspace-notes",
+      "kind": "created",
+      "resetGroup": "working-context-demos"
+    }
+  ]
+}

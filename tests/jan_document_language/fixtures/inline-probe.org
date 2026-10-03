@@ -1,0 +1,11 @@
+* Inline syntax
+Entity \alpha and math $x+y$ with @@html:<b>x</b>@@.
+Footnotes [fn:n] [fn:n:body] [fn::anonymous] and [cite:@doe; @roe].
+Calls call_total(1,2) and src_odin{value} end with a break\\
+Links https://example.test <https://example.test> [[target][description]].
+Targets <<ordinary>> <<<radio>>> and macro {{{name(arg)}}}.
+Cookies [50%] [1/2], scripts x_1 x^{2}, and symbols --- ...
+Times <2026-09-10 Wed> [2026-09-10 Wed] <2026-09-10 +1w>.
+Range <2026-09-10>--<2026-09-11> and diary <%%(diary-float t 1)>.
+Markup *bold* /italic/ _underlined_ =verbatim= ~code~ +struck+.
+| table cell | second |

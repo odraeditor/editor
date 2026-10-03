@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "user-guide",
+  "name": "User Guide",
+  "projects": [
+    {
+      "id": "forecast-engine",
+      "root": "projects/forecast-engine"
+    },
+    {
+      "id": "report-console",
+      "root": "projects/report-console"
+    }
+  ]
+}

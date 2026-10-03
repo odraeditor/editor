@@ -1,0 +1,18 @@
+#+title: Task metadata parity
+#+filetags: :work:
+#+property: Owner_ALL Ada Grace
+
+* TODO [#B] Ship planning slice :project:
+:PROPERTIES:
+:Owner: Ada
+:Labels: editor
+:Labels+: jan
+:END:
+- [X] Define contracts
+- [-] Verify native behavior
+- [ ] Publish documentation
+
+** DONE Preserve exact source ownership
+CLOSED: [2026-09-16 Wed 10:00]
+* Columns
+#+columns: %32ITEM %12Owner %8TODO

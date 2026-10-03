@@ -1,0 +1,2 @@
+- Ada <Research>. *Bounded Systems*. 2020.
+- Zed & Co.. *Exact Sources*. 2024.

@@ -1,0 +1,30 @@
+# SPDX-FileCopyrightText: 2026 Adrian PK
+# SPDX-License-Identifier: GPL-3.0-only
+#
+# This file is part of Odra. See COPYING for license terms.
+
+FROM docker.io/library/archlinux:base-devel@sha256:694da1fce635e3a14d90751941b08f02c500e8724682f7a00768e7152251ec34
+
+ARG ODIN_PACKAGE_URL=https://archive.archlinux.org/packages/o/odin/odin-dev_2026_07-1-x86_64.pkg.tar.zst
+ARG ODIN_PACKAGE_SHA256=7a6b3964b5e1b041c6a7ef8fefad90d0c54606f986c5829789bc12b6338e77ec
+ARG RACKET_PACKAGE_URL=https://archive.archlinux.org/packages/r/racket/racket-9.2-1-x86_64.pkg.tar.zst
+ARG RACKET_PACKAGE_SHA256=b74835426bbb21066d6e32412b07826fa66b47032c31074e1aeb35f2b62fe362
+
+RUN printf '%s\n' \
+      'Server = https://archive.archlinux.org/repos/2026/08/31/$repo/os/$arch' \
+      > /etc/pacman.d/mirrorlist \
+    && pacman -Syy --noconfirm \
+    && curl --fail --location --output /tmp/odin.pkg.tar.zst "$ODIN_PACKAGE_URL" \
+    && curl --fail --location --output /tmp/racket.pkg.tar.zst "$RACKET_PACKAGE_URL" \
+    && printf '%s  %s\n' "$ODIN_PACKAGE_SHA256" /tmp/odin.pkg.tar.zst \
+      | sha256sum --check --strict \
+    && printf '%s  %s\n' "$RACKET_PACKAGE_SHA256" /tmp/racket.pkg.tar.zst \
+      | sha256sum --check --strict \
+    && pacman -U --needed --noconfirm /tmp/odin.pkg.tar.zst /tmp/racket.pkg.tar.zst \
+    && test "$(odin version)" = 'odin version dev-2026-07:301c287de' \
+    && test "$(racket --version)" = 'Welcome to Racket v9.2 [cs].' \
+    && rm -f /tmp/odin.pkg.tar.zst /tmp/racket.pkg.tar.zst \
+    && pacman -Scc --noconfirm
+
+ENV LANG=C.UTF-8
+WORKDIR /workspace

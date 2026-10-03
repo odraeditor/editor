@@ -1,0 +1,29 @@
+{
+  "grammars": [
+    {
+      "name": "jan",
+      "camelcase": "Jan",
+      "scope": "text.jan",
+      "file-types": [
+        "org",
+        "jan"
+      ],
+      "injection-regex": "^jan$"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "description": "Lossless concrete grammar for the jan-org-9.8.10-v1 baseline",
+    "authors": [
+      {
+        "name": "Odra contributors"
+      }
+    ],
+    "links": {
+      "repository": "https://forge.adrianpk.com/adrianpk/odra"
+    }
+  },
+  "bindings": {
+    "c": true
+  }
+}

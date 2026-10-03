@@ -1,0 +1,350 @@
+{
+  "schema": 1,
+  "platform": "linux-x86_64",
+  "bundle": {
+    "binary": "bin/odra",
+    "license_directory": "LICENSES",
+    "product_modules": {
+      "destination": "bin/modules",
+      "manifest": "product-modules.manifest",
+      "artifacts": [
+        "libodra-darek.so",
+        "libodra-jan.so",
+        "libodra-ksawery.so",
+        "libodra-maksym.so"
+      ]
+    },
+    "runtime_resources": [
+      {
+        "name": "racket-boot",
+        "source_root": "release-input",
+        "source": "usr/lib/racket",
+        "destination": "lib/odra/racket/lib",
+        "mode": "selected-files",
+        "files": [
+          "petite.boot",
+          "racket.boot",
+          "scheme.boot",
+          "system.rktd"
+        ]
+      },
+      {
+        "name": "racket-collects",
+        "source_root": "release-input",
+        "source": "usr/share/racket/collects",
+        "destination": "share/odra/racket/collects",
+        "mode": "tree",
+        "files": []
+      },
+      {
+        "name": "racket-config",
+        "source_root": "generated",
+        "source": "minimal-racket-config",
+        "destination": "share/odra/racket/etc",
+        "mode": "generated-file",
+        "files": [
+          "config.rktd"
+        ]
+      }
+    ]
+  },
+  "product_terms": {
+    "path": "release/linux-x86_64/PREVIEW_TERMS.md",
+    "sha256": "e8f07a853dcfc64cc4216e8c449c719cd1498545c8ebc2157e4eb8e998f1f79b"
+  },
+  "baseline": {
+    "interpreter": "/lib64/ld-linux-x86-64.so.2",
+    "needed": [
+      "ld-linux-x86-64.so.2",
+      "libc.so.6",
+      "libgcc_s.so.1",
+      "liblz4.so.1",
+      "libm.so.6",
+      "libncursesw.so.6",
+      "libz.so.1"
+    ],
+    "system_components": [
+      {
+        "name": "glibc",
+        "needed": [
+          "ld-linux-x86-64.so.2",
+          "libc.so.6",
+          "libm.so.6"
+        ]
+      },
+      {
+        "name": "gcc-runtime",
+        "needed": [
+          "libgcc_s.so.1"
+        ]
+      },
+      {
+        "name": "lz4",
+        "needed": [
+          "liblz4.so.1"
+        ]
+      },
+      {
+        "name": "ncurses",
+        "needed": [
+          "libncursesw.so.6"
+        ]
+      },
+      {
+        "name": "zlib",
+        "needed": [
+          "libz.so.1"
+        ]
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "odin-core",
+      "version": "dev-2026-07",
+      "revision": "301c287de",
+      "source_url": "https://github.com/odin-lang/Odin/tree/301c287de",
+      "incorporation": "static",
+      "redistributed": true,
+      "license_expression": "Zlib",
+      "selected_license": "Zlib",
+      "source_obligation": "none",
+      "license_inputs": [
+        {
+          "kind": "file",
+          "root": "release-input",
+          "path": "usr/share/licenses/odin/LICENSE",
+          "sha256": "c28b9a4f5a6eb24038aa67c946804883713078ffc25b2c0829f29c03569f4bfa",
+          "bundle_path": "LICENSES/Odin/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "racket-cs",
+      "version": "9.2",
+      "revision": "v9.2",
+      "source_url": "https://github.com/racket/racket/tree/v9.2",
+      "incorporation": "static-and-runtime-resource",
+      "redistributed": true,
+      "license_expression": "(MIT OR Apache-2.0) AND Apache-2.0 AND Zlib AND Apache-2.0 WITH LLVM-exception",
+      "selected_license": "Apache-2.0",
+      "source_obligation": "none",
+      "license_inputs": [
+        {
+          "kind": "file",
+          "root": "release-input",
+          "path": "usr/share/racket/LICENSE.txt",
+          "sha256": "e2595b19b5ca137b9f6a4f1c299c25db5cbaf17314dd4368037ad559bfe9b1d8",
+          "bundle_path": "LICENSES/Racket/LICENSE.txt"
+        },
+        {
+          "kind": "file",
+          "root": "release-input",
+          "path": "usr/share/racket/LICENSE-APACHE.txt",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bundle_path": "LICENSES/Racket/LICENSE-APACHE.txt"
+        }
+      ]
+    },
+    {
+      "name": "libghostty-vt",
+      "version": "0.1.0-dev",
+      "revision": "7b47213f94058c3715205ce8fa73f7ae581a652c",
+      "source_url": "https://github.com/ghostty-org/ghostty/tree/7b47213f94058c3715205ce8fa73f7ae581a652c",
+      "incorporation": "static",
+      "redistributed": true,
+      "license_expression": "MIT",
+      "selected_license": "MIT",
+      "source_obligation": "none",
+      "license_inputs": [
+        {
+          "kind": "file",
+          "root": "repository",
+          "path": "third_party/libghostty-vt/7b47213f94058c3715205ce8fa73f7ae581a652c/LICENSE",
+          "sha256": "386211873e5b7a02f663ae4d7adf96285999f91608f8f9f31fecfd0f4095e6f1",
+          "bundle_path": "LICENSES/libghostty-vt/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "uucode",
+      "version": "0.2.0",
+      "revision": "2826a37a4562284fdacd8fa029d49509cc9bffcd",
+      "source_url": "https://github.com/jacobsandlund/uucode/tree/2826a37a4562284fdacd8fa029d49509cc9bffcd",
+      "incorporation": "static",
+      "redistributed": true,
+      "license_expression": "MIT AND Unicode-3.0",
+      "selected_license": "MIT AND Unicode-3.0",
+      "source_obligation": "none",
+      "license_inputs": [
+        {
+          "kind": "archive-member",
+          "root": "repository",
+          "archive": "third_party/libghostty-vt/7b47213f94058c3715205ce8fa73f7ae581a652c/packages/uucode-0.2.0-ZZjBPlK5VADj7fdoq7G8LIHzD5o6FSkcBXXrRWr4jnrA.tar.gz",
+          "member": "uucode-0.2.0-ZZjBPlK5VADj7fdoq7G8LIHzD5o6FSkcBXXrRWr4jnrA/LICENSE.md",
+          "sha256": "312e901e142be2477b4ca859e9311f9e3f80d33372991759b7921c1893605f33",
+          "bundle_path": "LICENSES/uucode/LICENSE.md"
+        },
+        {
+          "kind": "file",
+          "root": "repository",
+          "path": "third_party/libghostty-vt/7b47213f94058c3715205ce8fa73f7ae581a652c/licenses/uucode-LICENSE-Bjoern-Hoehrmann",
+          "sha256": "6e15e2fded266a51e5acf112e4b40d1a2c020525edb296146ab03db1aac70179",
+          "bundle_path": "LICENSES/uucode/LICENSE-Bjoern-Hoehrmann"
+        },
+        {
+          "kind": "file",
+          "root": "repository",
+          "path": "third_party/libghostty-vt/7b47213f94058c3715205ce8fa73f7ae581a652c/licenses/uucode-LICENSE-Unicode",
+          "sha256": "d693651e56e4fc62f7df06804328ff8a60b1437991858b10b1a070a487735e7d",
+          "bundle_path": "LICENSES/uucode/LICENSE-Unicode"
+        }
+      ]
+    },
+    {
+      "name": "wuffs",
+      "version": "0.4.0-alpha.10",
+      "revision": "7411f488fe2e2c205c3d3b3d28638b7356522930",
+      "source_url": "https://github.com/google/wuffs/tree/7411f488fe2e2c205c3d3b3d28638b7356522930",
+      "incorporation": "static",
+      "redistributed": true,
+      "license_expression": "MIT OR Apache-2.0",
+      "selected_license": "MIT",
+      "source_obligation": "none",
+      "license_inputs": [
+        {
+          "kind": "archive-member",
+          "root": "repository",
+          "archive": "third_party/libghostty-vt/7b47213f94058c3715205ce8fa73f7ae581a652c/packages/N-V-__8AAP5JWgCGP_AD0teWpa4krRvE9VPZzvviGdbmN4jI.tar.gz",
+          "member": "N-V-__8AAP5JWgCGP_AD0teWpa4krRvE9VPZzvviGdbmN4jI/LICENSE-MIT",
+          "sha256": "bb811a4b485eac3caeb8bdc58bbafb355fbcb6116010a7ea9179e5c70b0bc878",
+          "bundle_path": "LICENSES/Wuffs/LICENSE-MIT"
+        }
+      ]
+    },
+    {
+      "name": "zig-compiler-runtime",
+      "version": "0.16.0",
+      "revision": "zig-x86_64-linux-0.16.0",
+      "source_url": "https://ziglang.org/download/",
+      "incorporation": "static",
+      "redistributed": true,
+      "license_expression": "MIT",
+      "selected_license": "MIT",
+      "source_obligation": "none",
+      "license_inputs": [
+        {
+          "kind": "archive-member",
+          "root": "repository",
+          "archive": "third_party/libghostty-vt/7b47213f94058c3715205ce8fa73f7ae581a652c/toolchain/zig-x86_64-linux-0.16.0.tar.xz",
+          "member": "zig-x86_64-linux-0.16.0/LICENSE",
+          "sha256": "5c537d6853e005298a285d508cff9ac7192cea23576c840d485b2b586a7ff177",
+          "bundle_path": "LICENSES/Zig/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "tree-sitter",
+      "version": "0.26.12",
+      "revision": "808e4b1fc06e269a107c4bd8bd936cc6fde18b00",
+      "source_url": "https://github.com/tree-sitter/tree-sitter/tree/v0.26.12",
+      "incorporation": "static",
+      "redistributed": true,
+      "license_expression": "MIT",
+      "selected_license": "MIT",
+      "source_obligation": "none",
+      "license_inputs": [
+        {
+          "kind": "file",
+          "root": "repository",
+          "path": "third_party/tree-sitter/0.26.12/LICENSE",
+          "sha256": "c5cfb43042b6b72045f4ba997834d0a7786d2793d91680868b5815b39f14fc78",
+          "bundle_path": "LICENSES/Tree-sitter/LICENSE"
+        },
+        {
+          "kind": "file",
+          "root": "repository",
+          "path": "third_party/tree-sitter/0.26.12/lib/src/unicode/LICENSE",
+          "sha256": "6a18c5fac70d7860b57f5b72b4e2c9a1ba6b3d2741eef7ff9767c5379364f10d",
+          "bundle_path": "LICENSES/Tree-sitter/LICENSE-Unicode-ICU"
+        }
+      ]
+    },
+    {
+      "name": "tree-sitter-odin",
+      "version": "1.3.0",
+      "revision": "e8adc739b78409a99f8c31313f0bb54cc538cf73",
+      "source_url": "https://github.com/tree-sitter-grammars/tree-sitter-odin/tree/v1.3.0",
+      "incorporation": "static",
+      "redistributed": true,
+      "license_expression": "MIT",
+      "selected_license": "MIT",
+      "source_obligation": "none",
+      "license_inputs": [
+        {
+          "kind": "file",
+          "root": "repository",
+          "path": "third_party/tree-sitter-odin/1.3.0/LICENSE",
+          "sha256": "099c44248f8cf353123211318680e93465587c005a4b3730ce8cb5334de043d6",
+          "bundle_path": "LICENSES/Tree-sitter-Odin/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "unicode-character-database",
+      "version": "17.0.0",
+      "revision": "17.0.0",
+      "source_url": "https://www.unicode.org/Public/17.0.0/ucd/",
+      "incorporation": "generated-data",
+      "redistributed": true,
+      "license_expression": "Unicode-3.0",
+      "selected_license": "Unicode-3.0",
+      "source_obligation": "none",
+      "license_inputs": [
+        {
+          "kind": "file",
+          "root": "repository",
+          "path": "third_party/unicode/17.0.0/LICENSE",
+          "sha256": "a3ac0e44bcfdf353607e67ed1611965ee4d3b6f766eeff94dfbe2df8435b6b7f",
+          "bundle_path": "LICENSES/Unicode/LICENSE"
+        }
+      ]
+    }
+  ],
+  "build_tools": [
+    {
+      "name": "odin-compiler",
+      "version": "dev-2026-07",
+      "revision": "301c287de",
+      "source_url": "https://github.com/odin-lang/Odin/tree/301c287de",
+      "incorporation": "build-only",
+      "redistributed": false,
+      "license_expression": "Zlib"
+    },
+    {
+      "name": "racket-build-tools",
+      "version": "9.2",
+      "revision": "v9.2",
+      "source_url": "https://github.com/racket/racket/tree/v9.2",
+      "incorporation": "build-only",
+      "redistributed": false,
+      "license_expression": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "zig-compiler",
+      "version": "0.16.0",
+      "revision": "zig-x86_64-linux-0.16.0",
+      "source_url": "https://ziglang.org/download/",
+      "incorporation": "build-only",
+      "redistributed": false,
+      "license_expression": "MIT"
+    }
+  ],
+  "forbidden_bundle_segments": [
+    ".build",
+    ".git",
+    "ops",
+    "src",
+    "tests"
+  ]
+}

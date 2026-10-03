@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2026 Adrian PK
+# SPDX-License-Identifier: GPL-3.0-only
+#
+# This file is part of Odra. See COPYING for license terms.
+
+third_party/unicode/17.0.0/ucd/**/*.txt whitespace=-trailing-space,-blank-at-eof
+third_party/tree-sitter/** whitespace=-trailing-space,-blank-at-eof
+third_party/tree-sitter-odin/** whitespace=-trailing-space,-blank-at-eof
+third_party/libghostty-vt/** whitespace=-trailing-space,-blank-at-eof
+third_party/libghostty-vt/**/*.tar.* binary

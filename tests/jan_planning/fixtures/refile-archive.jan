@@ -1,0 +1,19 @@
+#+TITLE: Refile and archive parity
+
+* Projects
+** TODO Move this subtree :planning:
+:PROPERTIES:
+:ID: task-42
+:END:
+Body retained with the complete subtree.
+
+* Archive :ARCHIVE:
+** DONE Stored subtree
+:PROPERTIES:
+:JAN_ARCHIVE_SOURCE_PROVIDER: 7
+:JAN_ARCHIVE_SOURCE: notes/projects.jan
+:JAN_ARCHIVE_NODE: 42
+:JAN_ARCHIVE_PARENT: 7
+:JAN_ARCHIVE_REVISION: 11
+:JAN_ARCHIVE_POSITION: 3
+:END:

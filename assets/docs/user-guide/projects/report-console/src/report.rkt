@@ -1,0 +1,14 @@
+#lang racket/base
+; SPDX-FileCopyrightText: 2026 Adrian PK
+; SPDX-License-Identifier: GPL-3.0-only
+;
+; This file is part of Odra. See COPYING for license terms.
+
+
+(provide render-report)
+
+(define (render-report station sample-count average-temperature-c)
+  (string-append
+   (format "Station: ~a\n" station)
+   (format "Samples: ~a\n" sample-count)
+   (format "Average: ~a C" average-temperature-c)))

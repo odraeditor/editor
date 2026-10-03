@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2026 Adrian PK
+# SPDX-License-Identifier: GPL-3.0-only
+#
+# This file is part of Odra. See COPYING for license terms.
+
+#+TITLE: Forecast Computation
+#+PROPERTY: header-args:racket :results value :eval never-export
+
+* Observation totals
+  | Day | Samples |
+  |-----+---------|
+  | Mon |       3 |
+  | Tue |       4 |
+  | Wed |       5 |
+  |-----+---------|
+  | Total |      12 |
+  #+TBLFM: @>$2=vsum(@2..@4)
+
+* Safe source block
+  This block reads no files, starts no child process, and uses no network.
+
+  #+name: sample-summary
+  #+begin_src racket
+  (hash 'samples 12 'status 'ready)
+  #+end_src
+
+* Expected outcome
+  Recalculation changes only the total cell. Formula inspection does not edit
+  source. Explicit execution returns a typed value when a Racket adapter and
+  deny-first policy are available; otherwise it reports unavailable without
+  changing the block or existing results.

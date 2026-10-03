@@ -1,0 +1,32 @@
+#+title: Execution Adapter Closure
+#+property: header-args :results replace :exports both
+#+property: header-args:racket :cache yes
+
+* Project policy
+:PROPERTIES:
+:header-args: :session project
+:header-args:racket: :var project-name="odra"
+:END:
+
+#+name: explicit-racket-block
+#+begin_src racket :results value table :session exact :var count=3
+(for/list ([index (in-range count)]) (list index project-name))
+#+end_src
+
+#+RESULTS: explicit-racket-block
+| 0 | odra |
+| 1 | odra |
+| 2 | odra |
+
+#+name: preserved-emacs-lisp-block
+#+begin_src emacs-lisp :results value
+(+ 20 22)
+#+end_src
+
+#+RESULTS: preserved-emacs-lisp-block
+: 42
+
+#+name: unavailable-runtime-block
+#+begin_src jan-missing-runtime :results output
+print("preserved")
+#+end_src

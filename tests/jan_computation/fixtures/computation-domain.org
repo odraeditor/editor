@@ -1,0 +1,32 @@
+#+title: Computable Documents domain closure
+#+property: header-args:racket :results value replace :session closure :cache yes
+
+* Deterministic table
+
+| item | quantity | price | total |
+|------+----------+-------+-------|
+| pen  |        2 |     3 |       |
+| book |        1 |    10 |       |
+#+TBLFM: $4=$2*$3
+#+plot: with:histograms title:"Totals" ind:1 deps:(4)
+
+* Explicit source execution
+
+#+name: shared-helper
+#+begin_src racket :var value=1
+  (* value 2)
+#+end_src
+
+#+name: computed-fragment
+#+begin_src racket :var doubled=shared-helper(value=7) :tangle generated/report.rkt :comments link
+  <<shared-helper(value=7)>>
+  (+ doubled 1)
+#+end_src
+
+#+RESULTS: computed-fragment
+: 15
+
+* Batch intent
+
+The named sources above form an explicit atomic batch. Opening this document,
+rendering it, or exporting it does not authorize execution or file generation.

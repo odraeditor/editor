@@ -1,0 +1,1634 @@
+[
+  {
+    "type": "affiliated_keyword",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "center_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "affiliated_keyword",
+          "named": true
+        },
+        {
+          "type": "blank_line",
+          "named": true
+        },
+        {
+          "type": "center_block",
+          "named": true
+        },
+        {
+          "type": "clock",
+          "named": true
+        },
+        {
+          "type": "comment_block",
+          "named": true
+        },
+        {
+          "type": "diary_expression",
+          "named": true
+        },
+        {
+          "type": "drawer",
+          "named": true
+        },
+        {
+          "type": "dynamic_block",
+          "named": true
+        },
+        {
+          "type": "example_block",
+          "named": true
+        },
+        {
+          "type": "export_block",
+          "named": true
+        },
+        {
+          "type": "fixed_width_area",
+          "named": true
+        },
+        {
+          "type": "footnote_definition",
+          "named": true
+        },
+        {
+          "type": "heading_line",
+          "named": true
+        },
+        {
+          "type": "horizontal_rule",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "latex_environment",
+          "named": true
+        },
+        {
+          "type": "lesser_block",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "line_ending",
+          "named": true
+        },
+        {
+          "type": "paragraph",
+          "named": true
+        },
+        {
+          "type": "pipe_table",
+          "named": true
+        },
+        {
+          "type": "plain_list",
+          "named": true
+        },
+        {
+          "type": "property_drawer",
+          "named": true
+        },
+        {
+          "type": "quote_block",
+          "named": true
+        },
+        {
+          "type": "recovery",
+          "named": true
+        },
+        {
+          "type": "source_block",
+          "named": true
+        },
+        {
+          "type": "special_block",
+          "named": true
+        },
+        {
+          "type": "table_provider_form",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "citation",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "citation_reference",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "clock",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comment_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "diary_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "document",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "heading",
+          "named": true
+        },
+        {
+          "type": "zeroth_section",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "drawer",
+    "named": true,
+    "fields": {
+      "begin": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "line_ending",
+            "named": true
+          }
+        ]
+      },
+      "end": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "line_ending",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "blank_line",
+          "named": true
+        },
+        {
+          "type": "fixed_width_area",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "paragraph",
+          "named": true
+        },
+        {
+          "type": "recovery",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dynamic_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "affiliated_keyword",
+          "named": true
+        },
+        {
+          "type": "blank_line",
+          "named": true
+        },
+        {
+          "type": "center_block",
+          "named": true
+        },
+        {
+          "type": "clock",
+          "named": true
+        },
+        {
+          "type": "comment_block",
+          "named": true
+        },
+        {
+          "type": "diary_expression",
+          "named": true
+        },
+        {
+          "type": "drawer",
+          "named": true
+        },
+        {
+          "type": "dynamic_block",
+          "named": true
+        },
+        {
+          "type": "example_block",
+          "named": true
+        },
+        {
+          "type": "export_block",
+          "named": true
+        },
+        {
+          "type": "fixed_width_area",
+          "named": true
+        },
+        {
+          "type": "footnote_definition",
+          "named": true
+        },
+        {
+          "type": "heading_line",
+          "named": true
+        },
+        {
+          "type": "horizontal_rule",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "latex_environment",
+          "named": true
+        },
+        {
+          "type": "lesser_block",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "line_ending",
+          "named": true
+        },
+        {
+          "type": "paragraph",
+          "named": true
+        },
+        {
+          "type": "pipe_table",
+          "named": true
+        },
+        {
+          "type": "plain_list",
+          "named": true
+        },
+        {
+          "type": "property_drawer",
+          "named": true
+        },
+        {
+          "type": "quote_block",
+          "named": true
+        },
+        {
+          "type": "recovery",
+          "named": true
+        },
+        {
+          "type": "source_block",
+          "named": true
+        },
+        {
+          "type": "special_block",
+          "named": true
+        },
+        {
+          "type": "table_provider_form",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "example_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "export_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fixed_width_area",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "footnote_definition",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "heading",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "heading_line",
+          "named": true
+        },
+        {
+          "type": "section",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "heading_line",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "horizontal_rule",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "inline_line",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "angle_link",
+          "named": true
+        },
+        {
+          "type": "anonymous_footnote_reference",
+          "named": true
+        },
+        {
+          "type": "bold_markup",
+          "named": true
+        },
+        {
+          "type": "citation",
+          "named": true
+        },
+        {
+          "type": "code_markup",
+          "named": true
+        },
+        {
+          "type": "delayed_timestamp",
+          "named": true
+        },
+        {
+          "type": "diary_timestamp",
+          "named": true
+        },
+        {
+          "type": "entity",
+          "named": true
+        },
+        {
+          "type": "explicit_line_break",
+          "named": true
+        },
+        {
+          "type": "export_snippet",
+          "named": true
+        },
+        {
+          "type": "fraction_cookie",
+          "named": true
+        },
+        {
+          "type": "inline_call",
+          "named": true
+        },
+        {
+          "type": "inline_footnote_reference",
+          "named": true
+        },
+        {
+          "type": "inline_source",
+          "named": true
+        },
+        {
+          "type": "italic_markup",
+          "named": true
+        },
+        {
+          "type": "latex_fragment",
+          "named": true
+        },
+        {
+          "type": "line_ending",
+          "named": true
+        },
+        {
+          "type": "macro",
+          "named": true
+        },
+        {
+          "type": "named_footnote_reference",
+          "named": true
+        },
+        {
+          "type": "percentage_cookie",
+          "named": true
+        },
+        {
+          "type": "plain_link",
+          "named": true
+        },
+        {
+          "type": "plain_text",
+          "named": true
+        },
+        {
+          "type": "point_timestamp",
+          "named": true
+        },
+        {
+          "type": "radio_target",
+          "named": true
+        },
+        {
+          "type": "regular_link",
+          "named": true
+        },
+        {
+          "type": "repeating_timestamp",
+          "named": true
+        },
+        {
+          "type": "special_symbol",
+          "named": true
+        },
+        {
+          "type": "strike_through_markup",
+          "named": true
+        },
+        {
+          "type": "subscript",
+          "named": true
+        },
+        {
+          "type": "superscript",
+          "named": true
+        },
+        {
+          "type": "target",
+          "named": true
+        },
+        {
+          "type": "timestamp_range",
+          "named": true
+        },
+        {
+          "type": "underline_markup",
+          "named": true
+        },
+        {
+          "type": "verbatim_markup",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "inline_task",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "keyword",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "latex_environment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lesser_block",
+    "named": true,
+    "fields": {
+      "begin": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "line_ending",
+            "named": true
+          }
+        ]
+      },
+      "end": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "line_ending",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "line_comment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "list_item",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "node_property",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "paragraph",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "inline_line",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "pipe_table",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "table_row",
+          "named": true
+        },
+        {
+          "type": "table_separator_row",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "plain_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "list_item",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "planning_line",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "point_timestamp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "active_timestamp",
+          "named": true
+        },
+        {
+          "type": "inactive_timestamp",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "property_drawer",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "blank_line",
+          "named": true
+        },
+        {
+          "type": "line_ending",
+          "named": true
+        },
+        {
+          "type": "node_property",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "quote_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "affiliated_keyword",
+          "named": true
+        },
+        {
+          "type": "blank_line",
+          "named": true
+        },
+        {
+          "type": "center_block",
+          "named": true
+        },
+        {
+          "type": "clock",
+          "named": true
+        },
+        {
+          "type": "comment_block",
+          "named": true
+        },
+        {
+          "type": "diary_expression",
+          "named": true
+        },
+        {
+          "type": "drawer",
+          "named": true
+        },
+        {
+          "type": "dynamic_block",
+          "named": true
+        },
+        {
+          "type": "example_block",
+          "named": true
+        },
+        {
+          "type": "export_block",
+          "named": true
+        },
+        {
+          "type": "fixed_width_area",
+          "named": true
+        },
+        {
+          "type": "footnote_definition",
+          "named": true
+        },
+        {
+          "type": "heading_line",
+          "named": true
+        },
+        {
+          "type": "horizontal_rule",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "latex_environment",
+          "named": true
+        },
+        {
+          "type": "lesser_block",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "line_ending",
+          "named": true
+        },
+        {
+          "type": "paragraph",
+          "named": true
+        },
+        {
+          "type": "pipe_table",
+          "named": true
+        },
+        {
+          "type": "plain_list",
+          "named": true
+        },
+        {
+          "type": "property_drawer",
+          "named": true
+        },
+        {
+          "type": "quote_block",
+          "named": true
+        },
+        {
+          "type": "recovery",
+          "named": true
+        },
+        {
+          "type": "source_block",
+          "named": true
+        },
+        {
+          "type": "special_block",
+          "named": true
+        },
+        {
+          "type": "table_provider_form",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "recovery",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "section",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "affiliated_keyword",
+          "named": true
+        },
+        {
+          "type": "blank_line",
+          "named": true
+        },
+        {
+          "type": "center_block",
+          "named": true
+        },
+        {
+          "type": "clock",
+          "named": true
+        },
+        {
+          "type": "comment_block",
+          "named": true
+        },
+        {
+          "type": "diary_expression",
+          "named": true
+        },
+        {
+          "type": "drawer",
+          "named": true
+        },
+        {
+          "type": "dynamic_block",
+          "named": true
+        },
+        {
+          "type": "example_block",
+          "named": true
+        },
+        {
+          "type": "export_block",
+          "named": true
+        },
+        {
+          "type": "fixed_width_area",
+          "named": true
+        },
+        {
+          "type": "footnote_definition",
+          "named": true
+        },
+        {
+          "type": "horizontal_rule",
+          "named": true
+        },
+        {
+          "type": "inline_task",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "latex_environment",
+          "named": true
+        },
+        {
+          "type": "lesser_block",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "paragraph",
+          "named": true
+        },
+        {
+          "type": "pipe_table",
+          "named": true
+        },
+        {
+          "type": "plain_list",
+          "named": true
+        },
+        {
+          "type": "planning_line",
+          "named": true
+        },
+        {
+          "type": "property_drawer",
+          "named": true
+        },
+        {
+          "type": "quote_block",
+          "named": true
+        },
+        {
+          "type": "recovery",
+          "named": true
+        },
+        {
+          "type": "source_block",
+          "named": true
+        },
+        {
+          "type": "special_block",
+          "named": true
+        },
+        {
+          "type": "table_provider_form",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "special_block",
+    "named": true,
+    "fields": {
+      "begin": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "line_ending",
+            "named": true
+          }
+        ]
+      },
+      "end": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "line_ending",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "affiliated_keyword",
+          "named": true
+        },
+        {
+          "type": "blank_line",
+          "named": true
+        },
+        {
+          "type": "center_block",
+          "named": true
+        },
+        {
+          "type": "clock",
+          "named": true
+        },
+        {
+          "type": "comment_block",
+          "named": true
+        },
+        {
+          "type": "diary_expression",
+          "named": true
+        },
+        {
+          "type": "drawer",
+          "named": true
+        },
+        {
+          "type": "dynamic_block",
+          "named": true
+        },
+        {
+          "type": "example_block",
+          "named": true
+        },
+        {
+          "type": "export_block",
+          "named": true
+        },
+        {
+          "type": "fixed_width_area",
+          "named": true
+        },
+        {
+          "type": "footnote_definition",
+          "named": true
+        },
+        {
+          "type": "heading_line",
+          "named": true
+        },
+        {
+          "type": "horizontal_rule",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "latex_environment",
+          "named": true
+        },
+        {
+          "type": "lesser_block",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "paragraph",
+          "named": true
+        },
+        {
+          "type": "pipe_table",
+          "named": true
+        },
+        {
+          "type": "plain_list",
+          "named": true
+        },
+        {
+          "type": "property_drawer",
+          "named": true
+        },
+        {
+          "type": "quote_block",
+          "named": true
+        },
+        {
+          "type": "recovery",
+          "named": true
+        },
+        {
+          "type": "source_block",
+          "named": true
+        },
+        {
+          "type": "special_block",
+          "named": true
+        },
+        {
+          "type": "table_provider_form",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_cell",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "plain_text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_provider_form",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_row",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        },
+        {
+          "type": "table_cell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_separator_row",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "line_ending",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "zeroth_section",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "affiliated_keyword",
+          "named": true
+        },
+        {
+          "type": "blank_line",
+          "named": true
+        },
+        {
+          "type": "center_block",
+          "named": true
+        },
+        {
+          "type": "clock",
+          "named": true
+        },
+        {
+          "type": "comment_block",
+          "named": true
+        },
+        {
+          "type": "diary_expression",
+          "named": true
+        },
+        {
+          "type": "drawer",
+          "named": true
+        },
+        {
+          "type": "dynamic_block",
+          "named": true
+        },
+        {
+          "type": "example_block",
+          "named": true
+        },
+        {
+          "type": "export_block",
+          "named": true
+        },
+        {
+          "type": "fixed_width_area",
+          "named": true
+        },
+        {
+          "type": "footnote_definition",
+          "named": true
+        },
+        {
+          "type": "horizontal_rule",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "latex_environment",
+          "named": true
+        },
+        {
+          "type": "lesser_block",
+          "named": true
+        },
+        {
+          "type": "line_comment",
+          "named": true
+        },
+        {
+          "type": "paragraph",
+          "named": true
+        },
+        {
+          "type": "pipe_table",
+          "named": true
+        },
+        {
+          "type": "plain_list",
+          "named": true
+        },
+        {
+          "type": "property_drawer",
+          "named": true
+        },
+        {
+          "type": "quote_block",
+          "named": true
+        },
+        {
+          "type": "recovery",
+          "named": true
+        },
+        {
+          "type": "source_block",
+          "named": true
+        },
+        {
+          "type": "special_block",
+          "named": true
+        },
+        {
+          "type": "table_provider_form",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "active_timestamp",
+    "named": true
+  },
+  {
+    "type": "angle_link",
+    "named": true
+  },
+  {
+    "type": "anonymous_footnote_reference",
+    "named": true
+  },
+  {
+    "type": "blank_line",
+    "named": true
+  },
+  {
+    "type": "bold_markup",
+    "named": true
+  },
+  {
+    "type": "citation_reference",
+    "named": true
+  },
+  {
+    "type": "code_markup",
+    "named": true
+  },
+  {
+    "type": "delayed_timestamp",
+    "named": true
+  },
+  {
+    "type": "diary_timestamp",
+    "named": true
+  },
+  {
+    "type": "entity",
+    "named": true
+  },
+  {
+    "type": "explicit_line_break",
+    "named": true
+  },
+  {
+    "type": "export_snippet",
+    "named": true
+  },
+  {
+    "type": "fraction_cookie",
+    "named": true
+  },
+  {
+    "type": "inactive_timestamp",
+    "named": true
+  },
+  {
+    "type": "inline_call",
+    "named": true
+  },
+  {
+    "type": "inline_footnote_reference",
+    "named": true
+  },
+  {
+    "type": "inline_source",
+    "named": true
+  },
+  {
+    "type": "italic_markup",
+    "named": true
+  },
+  {
+    "type": "latex_fragment",
+    "named": true
+  },
+  {
+    "type": "line_ending",
+    "named": true
+  },
+  {
+    "type": "macro",
+    "named": true
+  },
+  {
+    "type": "named_footnote_reference",
+    "named": true
+  },
+  {
+    "type": "percentage_cookie",
+    "named": true
+  },
+  {
+    "type": "plain_link",
+    "named": true
+  },
+  {
+    "type": "plain_text",
+    "named": true
+  },
+  {
+    "type": "radio_target",
+    "named": true
+  },
+  {
+    "type": "regular_link",
+    "named": true
+  },
+  {
+    "type": "repeating_timestamp",
+    "named": true
+  },
+  {
+    "type": "special_symbol",
+    "named": true
+  },
+  {
+    "type": "strike_through_markup",
+    "named": true
+  },
+  {
+    "type": "subscript",
+    "named": true
+  },
+  {
+    "type": "superscript",
+    "named": true
+  },
+  {
+    "type": "target",
+    "named": true
+  },
+  {
+    "type": "timestamp_range",
+    "named": true
+  },
+  {
+    "type": "underline_markup",
+    "named": true
+  },
+  {
+    "type": "verbatim_markup",
+    "named": true
+  },
+  {
+    "type": "|",
+    "named": false
+  }
+]

@@ -1,0 +1,35 @@
+Editing Practice
+
+Forecast window: morning
+Station: Market Square
+Symbol: 🌦️ weather change
+
+    indented observation
+short
+this line is long enough to preserve a distant display column
+
+Page 1 checkpoint
+Observation 01: clear
+Observation 02: clear
+Observation 03: light wind
+Observation 04: light wind
+Observation 05: warming
+Observation 06: warming
+Observation 07: stable
+Observation 08: stable
+Observation 09: cloud cover
+Observation 10: cloud cover
+
+Page 2 checkpoint
+Observation 11: light rain
+Observation 12: light rain
+Observation 13: clearing
+Observation 14: clearing
+Observation 15: cooling
+Observation 16: cooling
+Observation 17: stable
+Observation 18: stable
+Observation 19: dusk
+Observation 20: night
+
+End of editing practice

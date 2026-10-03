@@ -1,0 +1,346 @@
+#!/bin/sh
+# SPDX-FileCopyrightText: 2026 Adrian PK
+# SPDX-License-Identifier: GPL-3.0-only
+#
+# This file is part of Odra. See COPYING for license terms.
+
+
+set -eu
+
+exercise_version=0.2.0
+platform=linux-x86_64
+
+fail() {
+  printf 'Odra User Guide operation failed: %s\n' "$1" >&2
+  exit 1
+}
+
+usage() {
+  printf '%s\n' \
+    'Usage: odra-guide setup [--root PATH]' \
+    '       odra-guide reset GROUP [--root PATH]' \
+    '       odra-guide cleanup --confirm PATH [--root PATH]'
+}
+
+write_project_record() {
+  record_project_root=$1
+  project_root=$2
+  project_id=$3
+  project_name=$4
+  escaped_root=$(printf '%s' "$project_root" | sed 's/\\/\\\\/g; s/"/\\"/g')
+  mkdir -p "$record_project_root/.odra"
+  printf '%s\n' \
+    '#lang odra/config' \
+    "(local-project #:format-version 2 #:id \"$project_id\" #:generation 1 #:name \"$project_name\" #:root \"$escaped_root\" #:trust untrusted)" \
+    > "$record_project_root/.odra/project.rkt"
+}
+
+write_project_reference() {
+  configuration_root=$1
+  project_root=$2
+  project_id=$3
+  escaped_root=$(printf '%s' "$project_root" | sed 's/\\/\\\\/g; s/"/\\"/g')
+  mkdir -p "$configuration_root/projects"
+  printf '%s\n' \
+    '#lang odra/config' \
+    "(project-reference #:format-version 1 #:id \"$project_id\" #:expected-project-generation 1 #:root \"$escaped_root\")" \
+    > "$configuration_root/projects/$project_id.rkt"
+}
+
+write_workspace_record() {
+  configuration_root=$1
+  forecast_root=$2
+  report_root=$3
+  escaped_forecast=$(printf '%s' "$forecast_root" | sed 's/\\/\\\\/g; s/"/\\"/g')
+  escaped_report=$(printf '%s' "$report_root" | sed 's/\\/\\\\/g; s/"/\\"/g')
+  mkdir -p "$configuration_root/workspaces"
+  printf '%s\n' \
+    '#lang odra/config' \
+    "(workspace #:format-version 1 #:id \"user-guide\" #:generation 1 #:name \"User Guide\" #:projects ((workspace-project #:id \"forecast-engine\" #:expected-project-generation 1 #:root \"$escaped_forecast\") (workspace-project #:id \"report-console\" #:expected-project-generation 1 #:root \"$escaped_report\")))" \
+    > "$configuration_root/workspaces/user-guide.rkt"
+}
+
+verify_guide_identity() {
+  guide_root=$1
+  [ -d "$guide_root" ] && [ ! -L "$guide_root" ] ||
+    fail "the guide root is unavailable or unsafe: $guide_root"
+  marker="$guide_root/.odra-guide-version"
+  [ -f "$marker" ] || fail "the target exists without a version marker: $guide_root"
+  [ "$(sed -n '1p' "$marker")" = "$exercise_version" ] ||
+    fail "the target contains a different exercise version: $guide_root"
+  [ -f "$guide_root/kit/SHA256SUMS" ] ||
+    fail "the existing kit checksum inventory is missing"
+  (cd "$guide_root/kit" && sha256sum --check --status SHA256SUMS) ||
+    fail "the existing kit differs from the verified exercise source"
+}
+
+verify_existing_setup() {
+  guide_root=$1
+  verify_guide_identity "$guide_root"
+  for required_path in \
+    work/dirs/notes \
+    work/projects/forecast-engine/.odra/project.rkt \
+    work/projects/report-console/.odra/project.rkt \
+    config/odra/projects/forecast-engine.rkt \
+    config/odra/projects/report-console.rkt \
+    config/odra/workspaces/user-guide.rkt
+  do
+    [ -e "$guide_root/$required_path" ] ||
+      fail "the existing setup is incomplete at $required_path"
+  done
+  printf 'Odra User Guide already available: %s\n' "$guide_root"
+}
+
+write_project_state() {
+  record_root=$1
+  guide_root=$2
+  project_id=$3
+  project_name=$4
+  staged_project_root="$record_root/work/projects/$project_id"
+  project_root="$guide_root/work/projects/$project_id"
+  configuration_root="$record_root/config/odra"
+  write_project_record "$staged_project_root" "$project_root" "$project_id" "$project_name"
+  write_project_reference "$configuration_root" "$project_root" "$project_id"
+}
+
+write_guide_state() {
+  record_root=$1
+  guide_root=$2
+  forecast_root="$guide_root/work/projects/forecast-engine"
+  report_root="$guide_root/work/projects/report-console"
+  configuration_root="$record_root/config/odra"
+  write_project_state "$record_root" "$guide_root" forecast-engine 'Forecast Engine'
+  write_project_state "$record_root" "$guide_root" report-console 'Report Console'
+  write_workspace_record "$configuration_root" "$forecast_root" "$report_root"
+}
+
+restore_payload_prefix() {
+  guide_root=$1
+  payload_prefix=$2
+  while IFS=' ' read -r digest relative_path; do
+    case "$relative_path" in
+      "$payload_prefix"/*)
+        source_path="$guide_root/kit/$relative_path"
+        destination="$guide_root/work/$relative_path"
+        mkdir -p "$(dirname "$destination")"
+        cp "$source_path" "$destination"
+        ;;
+    esac
+  done < "$guide_root/kit/SHA256SUMS"
+}
+
+remove_owned_path() {
+  guide_root=$1
+  owned_path=$2
+  case "$owned_path" in
+    "$guide_root"/*) ;;
+    *) fail "reset path escapes the guide root: $owned_path" ;;
+  esac
+  if [ -e "$owned_path" ] || [ -L "$owned_path" ]; then
+    rm -rf -- "$owned_path"
+  fi
+}
+
+reset_guide() {
+  guide_root=$1
+  reset_group=$2
+  verify_guide_identity "$guide_root"
+  case "$reset_group" in
+    notes)
+      restore_payload_prefix "$guide_root" dirs/notes
+      remove_owned_path "$guide_root" "$guide_root/work/dirs/notes/session-notes.txt"
+      ;;
+    forecast-engine)
+      restore_payload_prefix "$guide_root" projects/forecast-engine
+      remove_owned_path "$guide_root" "$guide_root/work/projects/forecast-engine/darek-practice"
+      remove_owned_path "$guide_root" "$guide_root/work/projects/forecast-engine/maksym-practice"
+      write_project_state "$guide_root" "$guide_root" forecast-engine 'Forecast Engine'
+      ;;
+    report-console)
+      restore_payload_prefix "$guide_root" projects/report-console
+      write_project_state "$guide_root" "$guide_root" report-console 'Report Console'
+      ;;
+    working-context-demos)
+      remove_owned_path "$guide_root" "$guide_root/work/dirs/project-removal-demo"
+      remove_owned_path "$guide_root" "$guide_root/work/dirs/workspace-notes"
+      ;;
+    configuration-examples)
+      remove_owned_path "$guide_root" "$guide_root/config/odra/init.rkt"
+      remove_owned_path "$guide_root" "$guide_root/config/odra/modules/ksawery-tools.rkt"
+      remove_owned_path "$guide_root" "$guide_root/config/odra/modules/text-commands.rkt"
+      remove_owned_path "$guide_root" "$guide_root/config/odra/settings/interface.rkt"
+      remove_owned_path "$guide_root" "$guide_root/config/odra/settings/keys.rkt"
+      ;;
+    report-console-promotion)
+      remove_owned_path "$guide_root" "$guide_root/work/projects/report-console/.odra/project.rkt"
+      remove_owned_path "$guide_root" "$guide_root/config/odra/projects/report-console.rkt"
+      remove_owned_path "$guide_root" "$guide_root/config/odra/workspaces/user-guide.rkt"
+      ;;
+    workspace-state)
+      write_guide_state "$guide_root" "$guide_root"
+      ;;
+    all)
+      reset_guide "$guide_root" notes
+      reset_guide "$guide_root" forecast-engine
+      reset_guide "$guide_root" report-console
+      reset_guide "$guide_root" working-context-demos
+      reset_guide "$guide_root" configuration-examples
+      write_guide_state "$guide_root" "$guide_root"
+      ;;
+    *) fail "unknown reset group: $reset_group" ;;
+  esac
+  printf 'Odra User Guide reset complete: %s\n' "$reset_group"
+}
+
+cleanup_guide() {
+  guide_root=$1
+  confirmation=$2
+  [ "$confirmation" = "$guide_root" ] ||
+    fail "cleanup confirmation must exactly match the guide root"
+  verify_guide_identity "$guide_root"
+  case "$guide_root" in
+    /|"") fail "the guide root is not a removable boundary" ;;
+  esac
+  rm -rf -- "$guide_root"
+  printf 'Odra User Guide removed: %s\n' "$guide_root"
+}
+
+setup_guide() {
+  guide_root=$1
+  case "$guide_root" in
+    /*) ;;
+    *) fail "the guide root must be an absolute path" ;;
+  esac
+  newline='
+'
+  carriage_return=$(printf '\r')
+  case "$guide_root" in
+    *"$newline"*|*"$carriage_return"*)
+      fail "the guide root may not contain line breaks"
+      ;;
+  esac
+
+  command -v odra >/dev/null 2>&1 || fail "odra is not available on PATH"
+  resolved_odra=$(readlink -f "$(command -v odra)")
+  expected_suffix="/odra-$exercise_version-$platform/bin/odra"
+  case "$resolved_odra" in
+    *"$expected_suffix") ;;
+    *) fail "odra does not resolve to the compatible $exercise_version Linux package" ;;
+  esac
+
+  script_path=$(readlink -f "$0")
+  kit_source=$(dirname "$(dirname "$script_path")")
+  [ -f "$kit_source/manifest.json" ] || fail "the exercise manifest is missing"
+  [ -f "$kit_source/SHA256SUMS" ] || fail "the exercise checksum inventory is missing"
+  (cd "$kit_source" && sha256sum --check --status SHA256SUMS) ||
+    fail "the exercise kit failed checksum verification"
+
+  if [ -e "$guide_root" ] || [ -L "$guide_root" ]; then
+    [ ! -L "$guide_root" ] || fail "the guide root may not be a symbolic link"
+    verify_existing_setup "$guide_root"
+    return
+  fi
+
+  guide_parent=$(dirname "$guide_root")
+  guide_name=$(basename "$guide_root")
+  mkdir -p "$guide_parent"
+  guide_parent=$(cd "$guide_parent" && pwd -P)
+  staging_root="$guide_parent/.$guide_name.setup.$$"
+  [ ! -e "$staging_root" ] && [ ! -L "$staging_root" ] ||
+    fail "the private setup staging path already exists"
+  cleanup_staging=true
+  trap 'if [ "$cleanup_staging" = true ]; then rm -rf -- "$staging_root"; fi' EXIT HUP INT TERM
+
+  mkdir -p "$staging_root/kit" "$staging_root/work" "$staging_root/config/odra"
+  cp -R "$kit_source/." "$staging_root/kit/"
+  cp -R "$kit_source/dirs" "$staging_root/work/dirs"
+  cp -R "$kit_source/projects" "$staging_root/work/projects"
+
+  write_guide_state "$staging_root" "$guide_root"
+  printf '%s\n' "$exercise_version" > "$staging_root/.odra-guide-version"
+
+  mv "$staging_root" "$guide_root"
+  cleanup_staging=false
+  trap - EXIT HUP INT TERM
+  printf 'Odra User Guide %s available: %s\n' "$exercise_version" "$guide_root"
+}
+
+[ "$#" -ge 1 ] || {
+  usage >&2
+  exit 2
+}
+
+command_name=$1
+shift
+case "$command_name" in
+  setup)
+    guide_root="$HOME/odra-guide"
+    while [ "$#" -gt 0 ]; do
+      case "$1" in
+        --root)
+          [ "$#" -ge 2 ] || fail "--root requires a path"
+          guide_root=$2
+          shift 2
+          ;;
+        --help|-h)
+          usage
+          exit 0
+          ;;
+        *) fail "unknown setup argument: $1" ;;
+      esac
+    done
+    setup_guide "$guide_root"
+    ;;
+  reset)
+    [ "$#" -ge 1 ] || fail "reset requires a group"
+    reset_group=$1
+    shift
+    guide_root="$HOME/odra-guide"
+    while [ "$#" -gt 0 ]; do
+      case "$1" in
+        --root)
+          [ "$#" -ge 2 ] || fail "--root requires a path"
+          guide_root=$2
+          shift 2
+          ;;
+        --help|-h)
+          usage
+          exit 0
+          ;;
+        *) fail "unknown reset argument: $1" ;;
+      esac
+    done
+    reset_guide "$guide_root" "$reset_group"
+    ;;
+  cleanup)
+    guide_root="$HOME/odra-guide"
+    confirmation=
+    while [ "$#" -gt 0 ]; do
+      case "$1" in
+        --root)
+          [ "$#" -ge 2 ] || fail "--root requires a path"
+          guide_root=$2
+          shift 2
+          ;;
+        --confirm)
+          [ "$#" -ge 2 ] || fail "--confirm requires a path"
+          confirmation=$2
+          shift 2
+          ;;
+        --help|-h)
+          usage
+          exit 0
+          ;;
+        *) fail "unknown cleanup argument: $1" ;;
+      esac
+    done
+    cleanup_guide "$guide_root" "$confirmation"
+    ;;
+  --help|-h)
+    usage
+    ;;
+  *)
+    usage >&2
+    exit 2
+    ;;
+esac

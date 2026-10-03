@@ -1,0 +1,120 @@
+{
+  "schema": 1,
+  "version": "public-source-v1",
+  "rules": [
+    {
+      "match": "exact",
+      "pattern": ".gitattributes",
+      "classification": "include",
+      "reason": "repository-metadata"
+    },
+    {
+      "match": "exact",
+      "pattern": ".gitignore",
+      "classification": "include",
+      "reason": "repository-metadata"
+    },
+    {
+      "match": "exact",
+      "pattern": "CHANGELOG.md",
+      "classification": "include",
+      "reason": "product-documentation"
+    },
+    {
+      "match": "exact",
+      "pattern": "COPYING",
+      "classification": "include",
+      "reason": "license-text"
+    },
+    {
+      "match": "exact",
+      "pattern": "Makefile",
+      "classification": "include",
+      "reason": "build-entrypoint"
+    },
+    {
+      "match": "exact",
+      "pattern": "README.md",
+      "classification": "include",
+      "reason": "product-documentation"
+    },
+    {
+      "match": "exact",
+      "pattern": "REUSE.toml",
+      "classification": "include",
+      "reason": "license-metadata"
+    },
+    {
+      "match": "prefix",
+      "pattern": ".agents/",
+      "classification": "exclude",
+      "reason": "private-agent-contract"
+    },
+    {
+      "match": "prefix",
+      "pattern": ".forgejo/",
+      "classification": "exclude",
+      "reason": "private-forge-automation"
+    },
+    {
+      "match": "prefix",
+      "pattern": "assets/",
+      "classification": "include",
+      "reason": "product-assets"
+    },
+    {
+      "match": "prefix",
+      "pattern": "docs/",
+      "classification": "include",
+      "reason": "product-documentation"
+    },
+    {
+      "match": "prefix",
+      "pattern": "makefiles/",
+      "classification": "include",
+      "reason": "build-tooling"
+    },
+    {
+      "match": "prefix",
+      "pattern": "ops/",
+      "classification": "exclude",
+      "reason": "private-development-operations"
+    },
+    {
+      "match": "prefix",
+      "pattern": "package-catalog/",
+      "classification": "include",
+      "reason": "package-catalog-fixtures"
+    },
+    {
+      "match": "prefix",
+      "pattern": "release/",
+      "classification": "include",
+      "reason": "release-input"
+    },
+    {
+      "match": "prefix",
+      "pattern": "scripts/",
+      "classification": "include",
+      "reason": "build-and-validation-tooling"
+    },
+    {
+      "match": "prefix",
+      "pattern": "src/",
+      "classification": "include",
+      "reason": "product-source"
+    },
+    {
+      "match": "prefix",
+      "pattern": "tests/",
+      "classification": "include",
+      "reason": "verification-source"
+    },
+    {
+      "match": "prefix",
+      "pattern": "third_party/",
+      "classification": "include",
+      "reason": "third-party-source"
+    }
+  ]
+}

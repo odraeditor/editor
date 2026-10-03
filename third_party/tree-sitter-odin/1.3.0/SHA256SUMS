@@ -1,0 +1,14 @@
+099c44248f8cf353123211318680e93465587c005a4b3730ce8cb5334de043d6  third_party/tree-sitter-odin/1.3.0/LICENSE
+834c8d3f13b71f6976198eed8b140ad2f2e89ec003b3f146af15d0d91f17c16b  third_party/tree-sitter-odin/1.3.0/bindings/c/tree-sitter-odin.h
+f6de53e5aa952ee0865aa260fcec2950e01c64c661baf4ff4433825c7b3fb4c0  third_party/tree-sitter-odin/1.3.0/grammar.js
+77744afce026ba6b21872a3ee29ed7169c81f16634236d4d3703222381b81444  third_party/tree-sitter-odin/1.3.0/package-lock.json
+237157801571957592959c2544fe66ff0e0afe0b6ace8b4a11316c9445269138  third_party/tree-sitter-odin/1.3.0/package.json
+d32354fc8cef7da7f2b235ed17d2d48c074150d5dc69bfedf18d1370b03f8cc7  third_party/tree-sitter-odin/1.3.0/queries/highlights.scm
+44a75b3f879982725c9333c8c2bbeebaf199434ddf3144c80979242cab35f374  third_party/tree-sitter-odin/1.3.0/src/grammar.json
+cde54dd3becda87680a099dc0a1939a83278bbe8302343eb8d1b80426656c49e  third_party/tree-sitter-odin/1.3.0/src/node-types.json
+8f672d8d022d70eeae822796924f2e45e692d6b2acd2ddc79bfeb5f696fa24f0  third_party/tree-sitter-odin/1.3.0/src/parser.c
+e342d07d3e35c3865a6bda0587f3a3b46a7b2411fd93cbee01dc40ab7631c93b  third_party/tree-sitter-odin/1.3.0/src/scanner.c
+b29c1c9fb7cc82f58c84b376df1297d6e2737a1d655fd356db0859e3c29c2fea  third_party/tree-sitter-odin/1.3.0/src/tree_sitter/alloc.h
+5bdf6ed1a78e3409fd443e085ca967a64c188a5d082aaf7f819bccd53a471c94  third_party/tree-sitter-odin/1.3.0/src/tree_sitter/array.h
+a1f6ef161fbaf48a0e10fca90ef5290a062462b307b3898aa562993853b9f80a  third_party/tree-sitter-odin/1.3.0/src/tree_sitter/parser.h
+41723c990a3d4fa29367f8afa41e830551aecdd63058fe4039dbb13c73d779a7  third_party/tree-sitter-odin/1.3.0/tree-sitter.json

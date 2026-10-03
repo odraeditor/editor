@@ -1,0 +1,36 @@
+# SPDX-FileCopyrightText: 2026 Adrian PK
+# SPDX-License-Identifier: GPL-3.0-only
+#
+# This file is part of Odra. See COPYING for license terms.
+
+#+TITLE: Jan Structured Documents
+#+AUTHOR: User Guide
+#+OPTIONS: toc:2
+
+* TODO Review observation model :forecast:
+  :PROPERTIES:
+  :OWNER:    analyst
+  :EFFORT:   0:30
+  :END:
+  SCHEDULED: <2026-09-17 Thu>
+
+  - [ ] Confirm the latest observation
+  - [ ] Publish the local summary
+
+* Metrics
+  | Name         | Value |
+  |--------------+-------|
+  | observations |     3 |
+  | confidence   |    82 |
+
+* Safe source example
+  The block is inert until an explicit execution command is accepted.
+
+  #+name: greeting
+  #+begin_src racket :results value :eval never-export
+  (string-append "hello" " from Jan")
+  #+end_src
+
+* Expected outcome
+  Both suffixes select the same Jan language and preserve identical source.
+  Status inspection reports each unavailable optional provider explicitly.

@@ -1,0 +1,67 @@
+{
+  "schema": "odra-evidence/workflow-registry/v1",
+  "workflows": [
+    {
+      "subject_id": "odra",
+      "workflow_id": "odra/main-check",
+      "definition_version": 1,
+      "class": "integration",
+      "steps": [
+        "odra/main-check/source-hygiene",
+        "odra/main-check/documentation",
+        "odra/main-check/build",
+        "odra/main-check/project-workspace-migration"
+      ],
+      "limits": {
+        "timeout_ms": 21600000,
+        "max_steps": 16,
+        "max_artifacts": 64
+      }
+    },
+    {
+      "subject_id": "odra",
+      "workflow_id": "odra/nightly",
+      "definition_version": 1,
+      "class": "nightly",
+      "steps": [
+        "odra/nightly/source-hygiene",
+        "odra/nightly/compile-checks",
+        "odra/nightly/ui-migration",
+        "odra/nightly/test-suite",
+        "odra/nightly/hosting",
+        "odra/nightly/documentation"
+      ],
+      "limits": {
+        "timeout_ms": 21600000,
+        "max_steps": 32,
+        "max_artifacts": 64
+      }
+    },
+    {
+      "subject_id": "odra",
+      "workflow_id": "odra/release",
+      "definition_version": 1,
+      "class": "release",
+      "steps": [
+        "odra/release/preflight",
+        "odra/release/snapshot-authority-probe",
+        "odra/release/package-authority-probe",
+        "odra/release/guide-authority-probe",
+        "odra/release/source-snapshot",
+        "odra/release/build-and-validate",
+        "odra/release/prepare-user-guide",
+        "odra/release/retain-candidate",
+        "odra/release/candidate-complete",
+        "odra/release/publish-source",
+        "odra/release/publish-bundle",
+        "odra/release/publish-user-guide",
+        "odra/release/public-verification"
+      ],
+      "limits": {
+        "timeout_ms": 28800000,
+        "max_steps": 64,
+        "max_artifacts": 128
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+; SPDX-FileCopyrightText: 2026 Adrian PK
+; SPDX-License-Identifier: GPL-3.0-only
+;
+; This file is part of Odra. See COPYING for license terms.
+
+(
+ ("Roman" "roman-alias-add" "Add an alias to the active Roman node." ())
+ ("Roman" "roman-alias-remove" "Remove an alias from the active Roman node." ())
+ ("Roman" "roman-capture" "Append an identified heading to the Roman inbox." (("Direct" "C-c n c") ("Modal" "C-c n c")))
+ ("Roman" "roman-daily-capture" "Create or append to today's Roman daily document." (("Direct" "C-c n j") ("Modal" "C-c n j")))
+ ("Roman" "roman-daily-next" "Open the next existing Roman daily document." ())
+ ("Roman" "roman-daily-previous" "Open the previous existing Roman daily document." ())
+ ("Roman" "roman-daily-visit" "Open today's existing Roman daily document." ())
+ ("Roman" "roman-diagnose-node" "Report identity, source range, state, and generations for the node at point." ())
+ ("Roman" "roman-graph" "Open the bounded Roman knowledge graph." (("Direct" "C-c n g") ("Modal" "C-c n g")))
+ ("Roman" "roman-graph-details" "Open graph details with source-relative locations and bounded previews." ())
+ ("Roman" "roman-graph-export" "Export the Roman graph as deterministic Graphviz DOT." ())
+ ("Roman" "roman-graph-render" "Render the Roman graph as SVG through the admitted Graphviz tool." ())
+ ("Roman" "roman-index-rebuild" "Rebuild the complete Roman semantic index." ())
+ ("Roman" "roman-index-refresh" "Discover the personal brain corpus and publish a complete Roman index." ())
+ ("Roman" "roman-index-status" "Report confirmed Roman corpus and index state." ())
+ ("Roman" "roman-node-at-point" "Report the semantic title of the narrowest node at point." ())
+ ("Roman" "roman-node-extract" "Request extraction of the current Roman node when supported." ())
+ ("Roman" "roman-node-find" "Find and visit a Roman node by title or alias." (("Direct" "C-c n f") ("Modal" "C-c n f")))
+ ("Roman" "roman-node-insert" "Insert a stable link to a selected Roman node." (("Direct" "C-c n i") ("Modal" "C-c n i")))
+ ("Roman" "roman-node-move" "Request movement of the current Roman node when supported." ())
+ ("Roman" "roman-node-random" "Report one node from the bounded confirmed candidate set." ())
+ ("Roman" "roman-ref-add" "Add an external reference to the active Roman node." ())
+ ("Roman" "roman-ref-find" "Find nodes through their indexed external references." ())
+ ("Roman" "roman-ref-remove" "Remove an external reference from the active Roman node." ())
+ ("Roman" "roman-relations-open" "Open backlinks, outgoing links, and external references for the node at point." (("Direct" "C-c n l") ("Modal" "C-c n l")))
+ ("Roman" "roman-relations-toggle" "Report incoming and outgoing relation counts for the node at point." ())
+ ("Roman" "roman-space-inspect" "Report Roman storage and lifecycle state." ())
+ ("Roman" "roman-tag-add" "Add a tag to the active Roman node." ())
+ ("Roman" "roman-tag-remove" "Remove a tag from the active Roman node." ())
+ ("Official packages" "rot13-region" "Apply ROT13 to the active region." ())
+)

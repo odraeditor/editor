@@ -1,0 +1,17 @@
+31d5b6f4243d5c7c6e1c4ebbbb9f6407bd1457a08bcc4f706521710341acba36  third_party/tree-sitter-rust/0.24.2/LICENSE
+2d9ed9b99c93d7a48a3d4f0c3e957f12100eee0d8bb2c3e0a136926312d0e9f5  third_party/tree-sitter-rust/0.24.2/README.md
+ce800b608d7722b205f98574d760b18a766111bdd9724c505b727e4a85a5d4f0  third_party/tree-sitter-rust/0.24.2/bindings/c/tree-sitter-rust.h
+e2b851418e14e3bacec9ef5993e0f8f05196a76641a5e1d488ab86d6973b3dc4  third_party/tree-sitter-rust/0.24.2/grammar.js
+4dff39ad3bae48ca9d01396a3d45ddd165ad01e5a371b85d9385cd29bd8a47ca  third_party/tree-sitter-rust/0.24.2/package-lock.json
+5abd4612ee8197b6d42a7dc5929550ce1c534cacebf6b687ed4befd339fea6c9  third_party/tree-sitter-rust/0.24.2/package.json
+0f0343107f14a7690157f51090a979eb8f8bfe4eada7c61763ddb4c54b1311d1  third_party/tree-sitter-rust/0.24.2/queries/highlights.scm
+723146f179bc0edfba2f51731c99afce8bed3b677dfb4435c303859fae299ba5  third_party/tree-sitter-rust/0.24.2/queries/injections.scm
+f22867fdebde5cb091861c08d34690dc2540f4318068bf81be9f6b0d348ab8c1  third_party/tree-sitter-rust/0.24.2/queries/tags.scm
+b0f58f41f5461fa141bb98d81fe8abece3056cff979c4068a2e6cddee5aa0663  third_party/tree-sitter-rust/0.24.2/src/grammar.json
+4b73a1248978340336100db455bf0731c23f9190568c9ae62265fa4a80a327d5  third_party/tree-sitter-rust/0.24.2/src/node-types.json
+9602518f9e57919910bf0e777e52f6bfc9325d4c182e998bdb4efd5682b76e4a  third_party/tree-sitter-rust/0.24.2/src/parser.c
+9609a2f92dbb7c32bc056fd8fb94e5478428f04496696aa08b048a9b66caf283  third_party/tree-sitter-rust/0.24.2/src/scanner.c
+b29c1c9fb7cc82f58c84b376df1297d6e2737a1d655fd356db0859e3c29c2fea  third_party/tree-sitter-rust/0.24.2/src/tree_sitter/alloc.h
+31e60a1bff6f715afacce03b5b70efe42b58371b4f9595dd4af52a577ff9608c  third_party/tree-sitter-rust/0.24.2/src/tree_sitter/array.h
+180b893c8734778fd32f372dfbc27bd6ad1cd2221f26150b31256ff6716320d2  third_party/tree-sitter-rust/0.24.2/src/tree_sitter/parser.h
+1ff4c338e5f9a8ff725f2f37b2e125dceac46a139cd572064d8dcfbbef9c0aaf  third_party/tree-sitter-rust/0.24.2/tree-sitter.json

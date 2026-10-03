@@ -1,0 +1,27 @@
+#+title: Jan Source Editing and Extraction
+
+* Shared library source
+
+#+name: shared-helper
+#+begin_src racket :noweb-ref shared-helper
+(define value $arguments)
+#+end_src
+
+* Tangled program
+
+#+name: program
+#+begin_src racket :noweb yes :tangle generated/main.rkt :comments link :padline yes
+#lang racket
+<<shared-helper(value=7)>>
+(displayln value)
+#+end_src
+
+#+name: computed-fragment
+#+begin_src racket :results value code
+'(define generated #t)
+#+end_src
+
+#+RESULTS: computed-fragment
+#+begin_src racket
+(define generated #t)
+#+end_src

@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2026 Adrian PK
+# SPDX-License-Identifier: GPL-3.0-only
+#
+# This file is part of Odra. See COPYING for license terms.
+
+#+TITLE: Forecast Report
+#+OPTIONS: toc:2 num:t
+#+BIBLIOGRAPHY: ../references/library.json
+
+* Summary
+  The forecast exercise contains three observations and one local report.
+
+* Evidence
+  The supplied local bibliography is inert until an explicit citation or
+  export operation resolves it.
+
+* Native output
+  Export this document to plain text, HTML, Markdown, or normalized Jan/Org.
+  These backends do not require an external converter.
+
+* Optional output
+  PDF, ODT, and remote publication can report unavailable. An unavailable tool
+  or provider must not change source or publish a partial success.
+
+* Expected outcome
+  Native output is deterministic. Publication exposes a complete manifest and
+  keeps local-build and remote-delivery states separate.

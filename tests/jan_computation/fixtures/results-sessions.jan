@@ -1,0 +1,28 @@
+#+title: Jan Results, Sessions, and Cache
+#+property: header-args:racket :results replace table :cache yes
+
+* Exact result owner
+
+#+name: block-a
+#+begin_src racket :session named-racket
+(list '(name value) '(alpha 3))
+#+end_src
+
+#+RESULTS: block-a
+| state         | value |
+| prior-success |     2 |
+
+* Explicit session recovery
+
+The named session may reconnect only after an explicit command confirms the
+exact adapter generation and scope. Opening this document never reconnects it.
+
+* Failure preservation
+
+#+name: partial-output-is-not-inserted
+#+begin_src racket :results replace output
+(error 'fixture "the prior successful result remains")
+#+end_src
+
+#+RESULTS: partial-output-is-not-inserted
+: prior-success

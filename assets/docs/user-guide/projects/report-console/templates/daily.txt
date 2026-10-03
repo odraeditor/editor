@@ -1,0 +1,4 @@
+Forecast report
+Station: {{station}}
+Samples: {{sample-count}}
+Average: {{average-temperature-c}} C

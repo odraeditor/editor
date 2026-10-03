@@ -1,0 +1,13 @@
+\input texinfo
+@setfilename output.info
+@node Top
+@top Native Backends
+@chapter Overview & status
+Read @strong{carefully} and visit @uref{https://example.test/?a=1&b=2,Odra}.
+
+@example
+(+ 1 2)
+@end example
+@image{media/diagram.png,,,,"Diagram"}
+
+@bye

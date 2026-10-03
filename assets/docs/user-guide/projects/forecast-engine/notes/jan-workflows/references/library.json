@@ -1,0 +1,9 @@
+[
+  {
+    "id": "forecast-notes-2026",
+    "type": "report",
+    "title": "Forecast Exercise Notes",
+    "author": [{"family": "Example", "given": "Reader"}],
+    "issued": {"date-parts": [[2026]]}
+  }
+]

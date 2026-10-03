@@ -1,0 +1,17 @@
+{
+  "name": "tree-sitter-jan",
+  "version": "0.1.0",
+  "description": "Repository-owned lossless concrete grammar for the Jan document language",
+  "private": true,
+  "main": "bindings/node",
+  "types": "bindings/node",
+  "files": [
+    "grammar.js",
+    "tree-sitter.json",
+    "bindings/c/*",
+    "src/**"
+  ],
+  "devDependencies": {
+    "tree-sitter-cli": "0.26.9"
+  }
+}

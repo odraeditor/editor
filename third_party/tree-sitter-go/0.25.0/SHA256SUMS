@@ -1,0 +1,15 @@
+2e0110e07abef7c2548b26ec9d6969775617ca539a0dc8dbeeb14d6452c711d1  third_party/tree-sitter-go/0.25.0/LICENSE
+37e2434348fcf0f67520f55fe71090b72d23ebfedb453c351492ec6e11bcb4d2  third_party/tree-sitter-go/0.25.0/README.md
+74aa0fdc6bac73f84a3554bf6d88d4d6da7f2c7a9f1bdd0f2da2a9c901c8df45  third_party/tree-sitter-go/0.25.0/bindings/c/tree_sitter/tree-sitter-go.h
+53e114833c6769d8a86b9e2dfab8bb68b0aaf185e7008a5c572bfa21b77aff1b  third_party/tree-sitter-go/0.25.0/grammar.js
+58621bdfe171663fb811081419392c085d2fa32f5d9cd8a9e3344069151e1fde  third_party/tree-sitter-go/0.25.0/package-lock.json
+63e08578adc8af9f86e45dc3127bc61722b4abb9c2e78cf6e1cc0b121f132f82  third_party/tree-sitter-go/0.25.0/package.json
+81182c986547eba7fa6316e82dfd621fb13b8fc89efac85432aee51a48ed0896  third_party/tree-sitter-go/0.25.0/queries/highlights.scm
+d1a9b1f678fe0278b85054e2dc56a28ef26aa478b8c88fb2b0dd83cdcdb9db35  third_party/tree-sitter-go/0.25.0/queries/tags.scm
+0dcc665aa521a1b73a200be13b4e376780cca037d764a165f12864babfe28000  third_party/tree-sitter-go/0.25.0/src/grammar.json
+8d77e723df0f0dfccb66d4571a5c3c17ecfb6c90959044c0992146b21f383bff  third_party/tree-sitter-go/0.25.0/src/node-types.json
+3dbf6ed1238b5dfcf2be4d2f2d4cb27a14d34f34d7784eccccbfd532fd4a6d85  third_party/tree-sitter-go/0.25.0/src/parser.c
+b29c1c9fb7cc82f58c84b376df1297d6e2737a1d655fd356db0859e3c29c2fea  third_party/tree-sitter-go/0.25.0/src/tree_sitter/alloc.h
+5bdf6ed1a78e3409fd443e085ca967a64c188a5d082aaf7f819bccd53a471c94  third_party/tree-sitter-go/0.25.0/src/tree_sitter/array.h
+180b893c8734778fd32f372dfbc27bd6ad1cd2221f26150b31256ff6716320d2  third_party/tree-sitter-go/0.25.0/src/tree_sitter/parser.h
+80d8a24648d35abb30a3cb2dbcc3a1af3919f274bcabcc277c0d9535d60abf9e  third_party/tree-sitter-go/0.25.0/tree-sitter.json

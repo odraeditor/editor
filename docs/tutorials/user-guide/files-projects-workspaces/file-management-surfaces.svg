@@ -1,0 +1,55 @@
+<!--
+SPDX-FileCopyrightText: 2026 Adrian PK
+SPDX-License-Identifier: GPL-3.0-only
+
+This file is part of Odra. See COPYING for license terms.
+-->
+
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description" width="1200" height="660" viewBox="0 0 1200 660">
+  <title id="title">Darek and Maksym present the same filesystem through different workflows</title>
+  <desc id="description">Darek keeps a persistent hierarchical tree beside editing. Maksym uses a full pane for a detailed directory listing whose filename fields can become editable. Both validate operations against the filesystem.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#596579"/>
+    </marker>
+    <style>
+      .title { font: 700 32px ui-sans-serif, system-ui, sans-serif; fill: #172033; }
+      .heading { font: 700 24px ui-sans-serif, system-ui, sans-serif; fill: #172033; }
+      .body { font: 500 18px ui-monospace, monospace; fill: #172033; }
+      .note { font: 600 17px ui-sans-serif, system-ui, sans-serif; fill: #536078; }
+      .surface { fill: #f3f6fb; stroke: #315f9b; stroke-width: 3; }
+      .field { fill: #fff0dd; stroke: #c65f16; stroke-width: 2; }
+      .store { fill: #edf5e8; stroke: #4f7f45; stroke-width: 3; }
+      .arrow { stroke: #596579; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="660" fill="#fbfaf7"/>
+  <text class="title" x="600" y="52" text-anchor="middle">TWO FILE-MANAGEMENT SURFACES</text>
+  <rect class="surface" x="55" y="90" width="510" height="400" rx="18"/>
+  <text class="heading" x="310" y="132" text-anchor="middle">Darek · persistent tree panel</text>
+  <text class="body" x="105" y="185">▾ Forecast Engine</text>
+  <text class="body" x="135" y="225">▾ src</text>
+  <text class="body" x="170" y="265">model.odin</text>
+  <text class="body" x="170" y="305">service.odin</text>
+  <text class="body" x="135" y="345">README.md</text>
+  <text class="body" x="105" y="400">▸ Report Console</text>
+  <text class="note" x="310" y="455" text-anchor="middle">Navigate hierarchy while an editing pane remains visible.</text>
+  <rect class="surface" x="635" y="90" width="510" height="400" rx="18"/>
+  <text class="heading" x="890" y="132" text-anchor="middle">Maksym · editable directory listing</text>
+  <text class="body" x="675" y="185">mode        size   modified      name</text>
+  <text class="body" x="675" y="225">drwxr-xr-x     —   2026-08-29</text>
+  <rect class="field" x="970" y="202" width="130" height="32" rx="5"/>
+  <text class="body" x="982" y="225">src/</text>
+  <text class="body" x="675" y="275">-rw-r--r--  1842   2026-08-29</text>
+  <rect class="field" x="970" y="252" width="130" height="32" rx="5"/>
+  <text class="body" x="982" y="275">README.md</text>
+  <text class="body" x="675" y="325">-rw-r--r--   620   2026-08-29</text>
+  <rect class="field" x="970" y="302" width="130" height="32" rx="5"/>
+  <text class="body" x="982" y="325">main.odin</text>
+  <text class="note" x="890" y="400" text-anchor="middle">Edit filename fields as text.</text>
+  <text class="note" x="890" y="430" text-anchor="middle">Apply one checked change set.</text>
+  <path class="arrow" d="M310 490 C310 535 500 535 500 565"/>
+  <path class="arrow" d="M890 490 C890 535 700 535 700 565"/>
+  <rect class="store" x="420" y="570" width="360" height="60" rx="16"/>
+  <text class="heading" x="600" y="608" text-anchor="middle">Validated filesystem state</text>
+</svg>

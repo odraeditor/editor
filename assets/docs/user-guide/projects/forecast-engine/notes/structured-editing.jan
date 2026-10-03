@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2026 Adrian PK
+# SPDX-License-Identifier: GPL-3.0-only
+#
+# This file is part of Odra. See COPYING for license terms.
+
+#+TITLE: Structured Editing Playground
+
+* Forecast review
+:NOTES:
+Use M-x jan-toggle-drawer twice at this drawer opening.
+:END:
+** Observations
+   - Load the latest sample
+   - Compare the station summary
+** Decisions
+   | item | owner | status |
+   | data | team  | ready  |
+
+#+begin_quote
+Canonical source remains visible in the terminal.
+#+end_quote
+
+Paragraph with a local note reference [fn:review].
+
+[fn:review] Review the generated summary before publication.

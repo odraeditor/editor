@@ -1,0 +1,35 @@
+#+title: Formula and Plot Closure
+
+#+name: quarterly-totals
+| Quarter | Revenue | Tax | Net |
+|---------+---------+-----+-----|
+| Q1      |     120 |  24 |  96 |
+| Q2      |     180 |  36 | 144 |
+| Q3      |     150 |  30 | 120 |
+#+TBLFM: $4=$2-$3;%.2f::@>$2=vsum(@2..@4);%.2f
+
+#+plot: title:"Quarterly net" ind:1 deps:(4) type:2d with:histograms
+
+#+name: duration-summary
+| Task  | Duration |
+|-------+----------|
+| Build |     1:30 |
+| Test  |     0:45 |
+#+TBLFM: @>$2=vsum(@2..@3);T
+
+#+name: preserved-racket-example
+#+begin_src racket :results value table :cache yes
+(list '(language available) '(racket #t))
+#+end_src
+
+#+RESULTS: preserved-racket-example
+| language | available |
+| racket   | #t        |
+
+#+name: unavailable-elisp-example
+#+begin_src emacs-lisp :results value
+(+ 1 2)
+#+end_src
+
+#+RESULTS: unavailable-elisp-example
+: 3
